@@ -6,12 +6,15 @@ Ao final do processamento, qual será o valor da variável SOMA?
 
 #Programa Valor da variavel SOMA :
 
-int INDICE = 13, SOMA = 0, K = 0;
-while (K < INDICE) {
-    K = K + 1;
-    SOMA = SOMA + K;
-}
-printf("%d", SOMA);
+INDICE = 13
+SOMA = 0
+K = 0
+
+while K < INDICE: 
+    K += 1
+    SOMA += K
+
+print(SOMA)
 
 # 
 
@@ -30,7 +33,7 @@ def fibonacci(n):
     return False 
 
 numero= int(input("Informe um número aqui: "))
-if fionacci(numero):
+if fibonacci(numero):
     print(f"O número {numero} pertence á sequência de Fibonacci.")
 else:
     print(f"O número {numero} não pertence á sequência de Fibonacci.")
@@ -85,8 +88,7 @@ dados = '''
     {"dia": 30, "valor": 8414.61}
 ]
 '''
-
-faturamento - json.loads(dados)
+faturamento = json.loads(dados)
 
 # Filtrando valores de faturamento, ignorando dias com valor 0.0
 valores = [dia["valor"] for dia in faturamento if dia["valor"] > 0]
@@ -116,21 +118,21 @@ print(f"Dias acima da média: {dias_acima_da_media}")
 
 Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.  
 
-#Programa calculo percentual de faturamento por estado:
+# Programa calculo percentual de faturamento por estado:
 
 faturamento = { 
-     "SP": 67836.43,
-     "RJ": 36678.66.
-     "MG": 29229.88,
-     "ES": 27165.48,
-     "Outros": 19849.53
+    "SP": 67836.43,
+    "RJ": 36678.66,
+    "MG": 29229.88,
+    "ES": 27165.48,
+    "Outros": 19849.53
 }
+
 total = sum(faturamento.values())
 
-percentuais = {estado: (valor / total ) * 100 for estado, valor in faturamento.items()}
-
-for estado, percentual in percentuais.itens():
-    print(f"{estado}: {percentual: .2f}%")
+percentuais = {estado: (valor / total) * 100 for estado, valor in faturamento.items()}
+for estado, percentual in percentuais.items():
+    print(f"{estado}: {percentual:.2f}%")
 
 #
 
@@ -142,10 +144,10 @@ b) Evite usar funções prontas, como, por exemplo, reverse;
 #Programa invertendo string:
 
 def inverter_string(s):
-    invertida - ""
+    invertida = ""
     for char in s:
-        invertida - char + invertida 
+        invertida = char + invertida 
     return invertida
 
-string = input("Informar uma string:") 
-print(f"String invertida: {inverter+string(string)}")
+string = input("Informe uma string:") 
+print(f"String invertida: {inverter_string(string)}")
